@@ -66,12 +66,35 @@ previewContainer.querySelector('#close-preview').onclick = () =>{
     });
 };
 
- var swiper = new Swiper(".menu-slider", {
+var swiper = new Swiper(".menu-slider", {
     grapCursor: true,
     loop: true,
     centeredSlides: true,
+    autoHeight: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+});
+
+var swiper = new Swiper(".blog-slider", {
+    grapCursor: true,
+    loop: true,
+    centeredSlides: true,
+    autoHeight: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        700: {
+          slidesPerView: 2,
+        },
+        1000: {
+          slidesPerView: 3,
+        },
     },
 });
